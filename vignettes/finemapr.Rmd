@@ -74,6 +74,7 @@ library(finemapr)
 library(magrittr)
 library(dplyr)  
 library(ggplot2)  
+library(knitr)
 theme_set(theme_linedraw())
 ```
 
