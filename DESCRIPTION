@@ -1,6 +1,6 @@
 Package: finemapr
 Title: R wrapper to fine-mappers
-Version: 0.1.0-2
+Version: 0.1.0-3
 Date: 2018-02-09
 Authors@R: c(person("Andrey", "Ziyatdinov", email = "andrey@example.com", role = c("aut", "cre")))
 Maintainer: Andrey Ziyatdinov <andrey@example.com>
