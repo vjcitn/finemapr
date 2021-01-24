@@ -32,7 +32,7 @@ By using `finemapr`, your input files are automatically prepared for each tool, 
 
 ## Tool-independent scheme of analysis workflow
 
-```r
+```{r foo, eval=FALSE}
 # set up
 options(finemapr_<tool> = "<path to fine-mapping tool>")
 
