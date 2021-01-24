@@ -70,7 +70,7 @@ We load packages for the analysis conducted in this document.
 ```{r inc}
 #library(devtools)
 #load_all("~/git/variani/finemapr")
-
+library(finemapr)
 library(magrittr)
 library(dplyr)  
 library(ggplot2)  
