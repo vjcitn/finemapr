@@ -68,8 +68,8 @@ options(finemapr_finemap = "~/apps/finemap/finemap")
 We load packages for the analysis conducted in this document.
 
 ```{r inc}
-library(devtools)
-load_all("~/git/variani/finemapr")
+#library(devtools)
+#load_all("~/git/variani/finemapr")
 
 library(magrittr)
 library(dplyr)  
@@ -112,49 +112,49 @@ mutate(z1, pval = pchisq(zscore^2, df = 1, lower.tail = FALSE)) %>%
 
 ## Run FINEMAP
 
-```{r run_finemap}
+```{r run_finemap, eval=FALSE}
 options(finemapr_finemap = "~/apps/finemap/finemap")
 
 out_finemap <- run_finemap(z1, ld1, n1, args = "--n-causal-max 3")
 ```
 
-```{r print_finemap}
+```{r print_finemap, eval=FALSE}
 print(out_finemap)
 ```
 
-```{r plot_finemap, fig.width = 6, fig.height = 9}
+```{r plot_finemap, fig.width = 6, fig.height = 9, eval=FALSE}
 plot(out_finemap, label_size = 3, grid_ncol = 1)
 ```
 
 ## Run CAVIAR
 
-```{r run_caviar}
+```{r run_caviar, eval=FALSE}
 options(finemapr_caviar = "~/apps/caviar/CAVIAR")
 
 out_caviar <- run_caviar(z1, ld1, args = "-c 3")
 ```
 
-```{r print_caviar}
+```{r print_caviar, eval=FALSE}
 print(out_caviar)
 ```
 
-```{r plot_caviar, fig.width = 6, fig.height = 3}
+```{r plot_caviar, fig.width = 6, fig.height = 3, eval=FALSE}
 plot(out_caviar, label_size = 3)
 ```
 
 ## Run PAINTOR
 
-```{r run_paintor}
+```{r run_paintor, eval=FALSE}
 options(finemapr_paintor = "~/apps/paintor/PAINTOR")
 
 out_paintor <- run_paintor(z1, ld1, n1, args = "-enumerate 3")
 ```
 
-```{r print_paintor}
+```{r print_paintor, eval=FALSE}
 print(out_paintor)
 ```
 
-```{r plot_paintor, fig.width = 6, fig.height = 3}
+```{r plot_paintor, fig.width = 6, fig.height = 3, eval=FALSE}
 plot(out_paintor, label_size = 3)
 ```
 
