@@ -2,10 +2,12 @@
 #' Run FINEMAP.
 #'
 #' @examples
+#' if (interactive()) {
 #' ex <- example_finemap()
 #' out <- finemapr(list(ex$tab1, ex$tab2), list(ex$ld1, ex$ld2), list(ex$n1, ex$n2), args = "--n-causal-max 1")
 #' out <- finemapr(list(ex$tab1, ex$tab2), list(ex$ld1, ex$ld2), list(ex$n1, ex$n2), method = "paintor", args = "-enumerate 1")
 #'
+#' }
 #' @export
 finemapr <- function(tab, ld, n, 
   annot, annotations, 
@@ -84,7 +86,7 @@ finemapr <- function(tab, ld, n,
   return(out)
 }
 
-#' @rdname Finemapr
+#' @rdname Finemapr_cl
 #' @export
 process_tab.Finemapr <- function(x, tabs, ...)
 {
@@ -138,7 +140,7 @@ process_tab.Finemapr <- function(x, tabs, ...)
   return(x)
 }
 
-#' @rdname Finemapr
+#' @rdname Finemapr_cl
 #' @export
 process_ld.Finemapr <- function(x, lds, ...)
 {

@@ -19,7 +19,10 @@ run_paintor(
 Run Paintor.
 }
 \examples{
-ex <- example_finemap()
-out <- run_paintor(ex$tab1, ex$ld1)
-
+if (interactive()) { # doesn't seem to work with PAINTOR 3.0
+ ex <- example_finemap()   # call needs additional parameters like -mcmc ... and it writes in your current folder!
+ if (file.exists("paintor")) {
+ out <- run_paintor(ex$tab1, ex$ld1)
+ }
+}
 }

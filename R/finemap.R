@@ -2,9 +2,11 @@
 #' Run FINEMAP.
 #'
 #' @examples
-#' ex <- example_finemap()
-#' out <- run_finemap(ex$tab1, ex$ld1, ex$n1, args = "--n-causal-max 3")
-#' out <- run_finemap(ex$tab1, ex$ld1, ex$n1, args = "--n-causal-max 1")
+#' if (interactive()) {
+#'   ex <- example_finemap()
+#'   out <- run_finemap(ex$tab1, ex$ld1, ex$n1, args = "--n-causal-max 3")
+#'   out <- run_finemap(ex$tab1, ex$ld1, ex$n1, args = "--n-causal-max 1")
+#'  } # does not seem to work in R 4.0.3
 #'
 #' @export
 run_finemap <- function(tab, ld, n, 

@@ -5,7 +5,7 @@
 #' S3 class Finemapr.
 #'
 #' @name Finemapr
-#' @rdname Finemapr
+#' @rdname Finemapr_cl
 #'
 #' @exportClass Finemapr
 
@@ -82,7 +82,7 @@ filename_annot <- function(x, ...) UseMethod("filename_annot")
 # Print methods
 #------------------------
 
-#' @rdname Finemapr
+#' @rdname Finemapr_cl
 #' @export
 print.Finemapr <- function(x, ...)
 {
@@ -99,7 +99,7 @@ print.Finemapr <- function(x, ...)
 # Plot methods
 #------------------------
 
-#' @rdname Finemapr
+#' @rdname Finemapr_cl
 #' @export
 print.Finemapr <- function(x, ...)
 {
@@ -119,7 +119,7 @@ print.Finemapr <- function(x, ...)
   return(invisible())
 }  
   
-#' @rdname Finemapr
+#' @rdname Finemapr_cl
 #' @export
 plot.Finemapr <- function(x, ...)
 {
@@ -127,7 +127,7 @@ plot.Finemapr <- function(x, ...)
 }
 
 
-#' @rdname Finemapr
+#' @rdname Finemapr_cl
 #' @export
 plot_snp.Finemapr <- function(x, lim_prob = c(0, 1.5), 
   label_size = getOption("finemapr_label_size"),  
@@ -155,7 +155,7 @@ plot_snp.Finemapr <- function(x, lim_prob = c(0, 1.5),
 # Other methods
 #------------------------
 
-#' @rdname Finemapr
+#' @rdname Finemapr_cl
 #' @export
 extract_credible_set.Finemapr <- function(x, ...)
 {

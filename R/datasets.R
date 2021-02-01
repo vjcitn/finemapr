@@ -2,12 +2,13 @@
 # Datasets from finemap
 #---------------------------
 
+# modified 2021.02.01 VJC -- original source uses refs to a local filesystem
+
 #' @export
-example_finemap <- function(dir_example = "~/.local/apps/finemap/example/")
-{
+example_finemap <- function(dir_example = system.file("extdata", package="finemapr")) {
   ### read
-  master <- read_delim(file.path(dir_example, "data"), 
-    delim = ";", col_names = TRUE, col_types = cols())
+#  master <- read_delim(file.path(dir_example, "data"), 
+#    delim = ";", col_names = TRUE, col_types = cols())
 
   ### dataset 1
   tab1 <- read_delim(file.path(dir_example, "region1.z"), 
@@ -20,22 +21,22 @@ example_finemap <- function(dir_example = "~/.local/apps/finemap/example/")
   rownames(ld1) <- tab1$snp
   colnames(ld1) <- tab1$snp
   
-  n1 <- master[["n-ind"]][1]
+#  n1 <- master[["n-ind"]][1]
 
   ### dataset 2
-  tab2 <- read_delim(file.path(dir_example, "region2.z"), 
-    delim = " ", col_names = FALSE, col_types = cols()) 
-  names(tab2) <- c("snp", "zscore")  
-  
-  ld2 <- read_delim(file.path(dir_example, "region2.ld"), 
-    delim = " ", col_names = FALSE, col_types = cols()) 
-  ld2 <- as.matrix(ld2)
-  rownames(ld2) <- tab2$snp
-  colnames(ld2) <- tab2$snp
-  
-  n2 <- master[["n-ind"]][2]
+#  tab2 <- read_delim(file.path(dir_example, "region2.z"), 
+#    delim = " ", col_names = FALSE, col_types = cols()) 
+#  names(tab2) <- c("snp", "zscore")  
+#  
+#  ld2 <- read_delim(file.path(dir_example, "region2.ld"), 
+#    delim = " ", col_names = FALSE, col_types = cols()) 
+#  ld2 <- as.matrix(ld2)
+#  rownames(ld2) <- tab2$snp
+#  colnames(ld2) <- tab2$snp
+#  
+#  n2 <- master[["n-ind"]][2]
     
   ### return
-  list(tab1 = tab1, ld1 = ld1, n1 = n1,
-    tab2 = tab2, ld2 = ld2, n2 = n2)
+  list(tab1 = tab1, ld1 = ld1) #
+#    tab2 = tab2, ld2 = ld2, n2 = n2)
 }

@@ -48,3 +48,6 @@ Collate:
     'zzz.R'
 RoxygenNote: 7.1.1
 VignetteBuilder: knitr
+Remotes:
+    slowkow/proxysnps
+Encoding: UTF-8

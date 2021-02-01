@@ -3,7 +3,7 @@
 #------------------------
 
 
-#' @rdname Finemapr
+#' @rdname Finemapr_cl
 #'
 #' @note
 #' Colors: http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf

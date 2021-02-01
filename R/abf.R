@@ -1,9 +1,12 @@
 
+#' abf, needs title
 #' @examples
-#' ex <- example_finemap()
-#' se <- rep(1/sqrt(ex$n1), nrow(ex$tab1))
-#' effect <- ex$tab1$zscore * se
-#' out <- abf(effect, se)
+#' if (interactive()) {
+#'  ex <- example_finemap()
+#'  se <- rep(1/sqrt(ex$n1), nrow(ex$tab1))
+#'  effect <- ex$tab1$zscore * se
+#'  out <- abf(effect, se)
+#' }
 #' @export
 abf <- function(effect, se, snp = paste0("snp", seq(1, nrow(effect))))
 {

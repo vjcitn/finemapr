@@ -2,16 +2,19 @@
 #' Run Paintor.
 #' 
 #' @examples
-#' ex <- example_finemap()
-#' out <- run_paintor(ex$tab1, ex$ld1)
-#'
+#' if (interactive()) { # doesn't seem to work with PAINTOR 3.0
+#'  ex <- example_finemap()   # call needs additional parameters like -mcmc ... and it writes in your current folder!
+#'  if (file.exists("paintor")) {
+#'  out <- run_paintor(ex$tab1, ex$ld1)
+#'  }
+#' }
 #' @export
 run_paintor <- function(tab, ld, n, annot, annotations, 
   dir_run = "run_paintor",
   tool = getOption("finemapr_paintor"), args = "")
 {
   ### arg
-  stopifnot(class(ld) == "matrix")
+  stopifnot(inherits(ld ,"matrix")) # VJC: original test only works for pre 4.0 S3 matrix class; now c("matrix", "array") is the class tag
   stopifnot(class(dir_run) == "character")
   
   stopifnot(!is.null(rownames(ld)))

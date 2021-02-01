@@ -21,8 +21,9 @@ Output file (`*_post`):
    95%-causal credible set.
 }
 \examples{
-ex <- example_finemap()
-out <- run_caviar(ex$tab1, ex$ld1, args = "-c 2")
-out <- run_caviar(ex$tab1, ex$ld1, args = "-c 0")
-
+if (interactive()) {
+ ex <- example_finemap()
+ out <- run_caviar(ex$tab1, ex$ld1, args = "-c 2")
+ out <- run_caviar(ex$tab1, ex$ld1, args = "-c 0")
+}
 }

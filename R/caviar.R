@@ -9,17 +9,18 @@
 #'    95%-causal credible set.
 #'
 #' @examples
-#' ex <- example_finemap()
-#' out <- run_caviar(ex$tab1, ex$ld1, args = "-c 2")
-#' out <- run_caviar(ex$tab1, ex$ld1, args = "-c 0")
-#'
+#' if (interactive()) {
+#'  ex <- example_finemap()
+#'  out <- run_caviar(ex$tab1, ex$ld1, args = "-c 2")
+#'  out <- run_caviar(ex$tab1, ex$ld1, args = "-c 0")
+#' }
 #' @export
 run_caviar <- function(tab, ld, 
   dir_run = "run_caviar",
   tool = getOption("finemapr_caviar"), args = "")
 {
   ### arg
-  stopifnot(class(ld) == "matrix")
+  stopifnot(inherits(ld, "matrix")) # don't test for class equality
   stopifnot(class(dir_run) == "character")
   
   stopifnot(!is.null(rownames(ld)))
