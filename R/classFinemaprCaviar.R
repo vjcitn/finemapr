@@ -5,7 +5,6 @@
 #'
 #' @exportClass FinemaprCaviar
 
-#' @rdname FinemaprCaviar
 #' @export
 print.FinemaprCaviar <- function(x, ...)
 {
